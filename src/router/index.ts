@@ -9,7 +9,6 @@ const router = createRouter({
       path: "/",
       name: "layout",
       component: MainLayout,
-      
       children: [
         {
           path: "/",
@@ -31,40 +30,10 @@ const router = createRouter({
           path: "/:pathMatch(.*)*",
           name: "not-found",
           component: () => import("../views/NotFoundView.vue"),
-        }
+        },
       ],
     },
   ],
 });
 
 export default router;
-
-// const router = createBrowserRouter([
-//   {
-//     path: "/",
-//     element: <Layout />,
-//     errorElement: <ErrorPage />,
-//     children: [
-//       {
-//         index: true,
-//         element: <IndexPage />,
-//         loader: indexRouteLoader,
-//         errorElement: <IndexRouteError />,
-//       },
-//       {
-//         path: "/games/:slug",
-//         element: <GamePage />,
-//         loader: ({ params }) => gameRouteLoader(params.slug),
-//       },
-//       {
-//         path: "/highscores",
-//         loader: highscoreRouteLoader,
-//         lazy: () => import('./pages/HighscorePage.tsx'),
-//       },
-//       {
-//         path: "*",
-//         element: <NotFound />,
-//       },
-//     ],
-//   },
-// ]);
