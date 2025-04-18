@@ -16,6 +16,13 @@
       "custom_domain": true
     }
   ],
+	"d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "memcaydia-db",
+      "database_id": "c8d78b4e-25ba-4c1d-b1a4-1c9400f28292"
+    }
+  ],
 	"observability": {
 		"enabled": true
 	}
