@@ -8,7 +8,7 @@ export default {
 
     if (pathname === "/api/games") {
       try {
-        const { results } = await env.DB.prepare("SELECT * FROM games").all();
+        const { results } = await env.DB.prepare("SELECT * FROM games WHERE is_published = true").all();
         return Response.json(results);
       }
       catch (error) {
